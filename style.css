@@ -22,6 +22,38 @@ p {
 
 /* navigation section */
 
+/*dropdown*/
+    .dropdown {
+        display: none;
+        box-shadow: 0 0 10px black;
+        justify-content: flex-end;
+        padding: 2rem 0;
+        z-index: 1;
+        position: fixed;
+        background-color: rgb(232, 232, 232);
+        width:-webkit-fill-available;
+        top: -14vh;
+        transition: all 500ms;
+    }
+
+    .dropdown > ul {
+        list-style-type: none;
+        line-height: 2rem;
+        width: 100%;
+    }
+
+    .dropdown > ul > li {
+        width: 100%;
+        text-align: center;
+        line-height: 4rem;
+        font-size: 2rem;
+        
+    }
+
+    .dropdown > ul > li:hover {
+        background-color: rgb(184, 184, 184);
+    }
+/*nav bar*/
 
 .container {
     position: fixed;
@@ -34,7 +66,7 @@ p {
     box-shadow: 0 0 10px black;
     padding-right: 2rem;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
 }
 
 .icon {
@@ -56,11 +88,17 @@ p {
 
 .container ul li {
     display: inline;
-    padding: 0 1rem;
+    padding: 3.7vh 1rem;
+    transition: all 300ms;
+    height: 100%;
     
 }
 
-.container ul li a {
+.container ul li:hover { 
+    background-color: rgb(184, 184, 184);
+}
+
+.navlink {
     text-decoration: none;
     display: inline;
     color:black;
@@ -69,13 +107,16 @@ p {
     transition: color 100ms;
 }
 
-.container ul li a:hover {
+.navlink:hover {
     color: white;
 }
 
 .hamburger {
     width: max-content;
     justify-self: end;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .hamburger:hover {
@@ -86,11 +127,15 @@ p {
     width: 32px;
     background-color: black;
     height: 4px;
-    margin: 4px;
+    margin: 2px;
     border-radius: 5px;
-
+    position: relative;
+    transition: all 300ms;
 }
 
+
+
+    
 @media screen and (max-width: 500px) {
     .container ul {
         display: none;
